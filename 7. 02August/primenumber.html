@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fClick(){
+            let n1 = document.getElementById("n1").value;
+            let n2 = document.getElementById("n2").value;
+            var n = Math.floor(n2/n1);
+            console.log(n);
+            document.getElementById("p1").innerHTML = n;            
+        }
+    </script>
+</head>
+<body>  
+    <label for="n1"> enter the number of members <input type = "text" name ="n1" id="n1"/> </label> <br>
+    <label for="n2"> enter the number of balls <input type = "text" name ="n2" id="n2"/> </label> 
+    <button onclick="fClick()">Click here!</button>
+    <p id="p1"></p>
+</body>
+</html>
