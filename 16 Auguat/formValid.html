@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Form validation using regex</h1>
+    <script>
+        function check(myform){
+            if(myform.myname.value == "" || myform.myname.value == null ){
+                alert("name is mandaory");
+                return false;
+            }
+            if(myform.phoneno.value == "" || myform.phoneno.value == null ){
+                alert("name is mandaory");
+                return false;
+            }
+            else{
+                return true;
+            }
+        }
+
+    </script>
+    <form
+        name="#"
+        action = "formprocess.html"
+        method="get"
+        onSubmit = "return check(formvalidate)"
+    >
+    <p> Name:<input type="Text" size="50" name="myname"/></p>
+    <p> Phone no:<input type="Text" size="50" name="phoneno"/></p>
+    <p>
+    <input type= "submit" value="submit"/>
+    <input type="reset" value="clear">
+    </p>
+</body>
+</html>
