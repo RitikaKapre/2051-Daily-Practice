@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <p id ="p1"></p>
+    <p id="err"></p> -->
+    <input type="text" name="n1" id="n1" placeholder="enter a number" />
+    <p id="err"></p>
+    <button onclick="myfun()">submit</button>
+    <p id ="demo"></p>
+    <script>
+        // let a=0;
+        // a+=1;
+        // try{
+        //     alertt("hi");
+        // }
+        // catch(err){
+        //     document.getElementById("err").innerHTML = err.message;
+        // }
+        // a+=1;
+        // document.getElementById("p1").innerHTML = a;
+        function myfun(){
+            let a = document.getElementById("n1").value;
+            try{if(!isNaN(a)){
+                a = Number(a);
+            }if(a< 18){
+                throw "its too low";
+
+            }
+            if(a>60){ 
+                throw "its too high";
+            }
+            else{
+                throw "its not a number";
+            }
+        }
+        catch(err){
+                document.getElementById("err").innerHTML = a
+            }
+        }
+    </script>
+</body>
+</html>
